@@ -1,0 +1,80 @@
+@import "../../styles/partials/allUtils";
+.nav {
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'AvenirNext LT Pro';
+  @include tablet {
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__logo {
+    margin: 16px 96px 16px 96px;
+    @include tablet {
+        margin: 0 56px 0 24px;
+    }
+    @include desktop {
+        margin: 0 56px 0 180px;
+    }
+  }
+  &__list {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    overflow: hidden;
+    justify-content: center;
+    
+        @include tablet {
+            height: 100%;
+            justify-content: start;
+        }
+        a {
+            width: 100%;
+            list-style-type: none;
+            text-align: center;
+            border-bottom: 5px solid $black;
+            text-decoration: none;
+            padding-bottom: 16px;
+            color: $silver;
+            font-weight: bold;
+            @include tablet {
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                margin-right: 56px;
+                padding-bottom: 0;
+            }
+        }
+        a:hover {
+            border-bottom: 5px solid $mercury;
+            color: $mercury;
+        }
+
+        a.active {
+            border-bottom: 5px solid $mercury;
+            color: $mercury;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

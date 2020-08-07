@@ -1,0 +1,228 @@
+@import "../../styles/partials/allUtils";
+
+.locations {
+  margin: 0 16px 0 16px;
+  @include tablet {
+    margin: 0 24px 0 24px;
+  }
+  @include desktop {
+    margin: 0 180px 0 180px;
+  }
+  &__header {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin: 48px 0 48px 0;
+    }
+    h1 {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 800;
+      margin: 32px 0 16px 0;
+      @include tablet {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 0;
+      }
+    }
+    &--search {
+      display: flex;
+      margin: 0px 0 16px 0;
+      width: 100%;
+      @include tablet {
+        width: 252px;
+        margin: 0;
+      }
+      &__box {
+        width: 75%;
+        height: 48px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-width: thin;
+        border-color: #E1E1E1;
+        color: black;
+        background-color: #FAFAFA;
+        border-style: solid;
+        border-left: none;
+        @include tablet {
+          width: 100%;
+        }
+      }
+      &__icon {
+        border-width: thin;
+        border-color: #E1E1E1;
+        border-left-style: solid;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: #FAFAFA;
+        padding-left: 16px;
+      }
+    }
+  }
+}
+.warehouses {
+  font-weight: 200;
+  padding: 24px 0 24px 0;
+  border-bottom-style: solid;
+  border-bottom-width: 0.1rem;
+  border-bottom-color: $mercury;
+  width: 288px;
+  @include tablet {
+    width: 720px;
+    padding-bottom: 0;
+  }
+  @include desktop {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+  p {
+    font-size: 13px;
+    line-height: 22px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__name {
+    margin: 0 0 24px 0;
+    @include desktop {
+      width: 210px;
+      margin-right: 68px;
+    }
+    p {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    img {
+      @include desktop {
+        position: absolute;
+        top: 47px;
+        right: 0px;
+      }
+    }
+    
+    img {
+      @include desktop {
+        position: absolute;
+        top: 47px;
+        right: 0px;
+      }
+    }
+
+  }
+  &__info {
+    margin: 0 0 24px 0;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+    &--person {
+      margin: 0 0 24px 0;
+      @include tablet {
+        width: 240px;
+      }
+      @include desktop {
+        width: 150px;
+        margin-right: 68px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    &--contact {
+margin: 0;
+      @include tablet {
+        width: 240px;
+      }
+      @include desktop {
+        width: 150px;
+        margin-right: 100px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  &__inventory {
+    @include tablet {
+      width: 240px;
+    }
+    @include desktop {
+      width: 150px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  
+}
+
+.addBtn {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  bottom: 30px;
+  margin-right: 16px;
+
+  &__img{
+    background-color: #002F5F;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    border-radius: 50%;
+  }
+  
+}
+
+.container {
+display: none;
+h5 {
+  width: 150px;
+  margin: 0em;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $silver;
+  margin-right: 68px;
+}
+@include desktop {
+  display: flex;
+  
+  
+}
+.addBtn {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  bottom: 30px;
+  margin-right: 16px;
+  &__img{
+    background-color: #002F5F;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    border-radius: 50%;
+  }
+}
+.container {
+display: none;
+h5 {
+  width: 150px;
+  margin: 0em;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $silver;
+  margin-right: 68px;
+}
+@include desktop {
+  display: flex;
+}
+}
+}

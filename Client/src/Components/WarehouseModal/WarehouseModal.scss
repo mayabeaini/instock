@@ -1,0 +1,181 @@
+@import "../../styles/partials/allUtils";
+
+.warehouseModal {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  bottom: 30px;
+  margin-right: 16px;
+
+  &__btn {
+    background-color: #002f5f;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    border-radius: 50%;
+  }
+
+  &__box {
+    overflow-y: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ReactModal__Html--open,
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 1rem;
+  margin: auto;
+  overflow-y: auto;
+
+ 
+
+ 
+
+  &__header {
+    font-weight: 800;
+    font-size: 24px;
+    list-style: 32px;
+    color: $black;
+    
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  @include tablet {
+    padding: 2.5rem;
+    border-radius: 0.25rem;
+    height: 36rem;
+    width: 36rem;
+  }
+
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+   
+
+    &--name {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0 10px 0;
+      width: 288px;
+
+      &__label {
+        margin: 0em;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: bold;
+        color: $silver;
+
+  
+      }
+
+      
+
+      &__text {
+        height: 48px;
+        border-radius: 5px;
+        border-width: thin;
+        border-color: #e1e1e1;
+        color: black;
+        background-color: #fafafa;
+        border-style: solid;
+        padding-left: 10px;
+        font-size: 13px;
+        line-height: 18px;
+        color: $black;
+
+        @include tablet {
+          width: auto;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+
+.add-new-warehouseBtn {
+  width: 100%;
+  margin: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+
+  &__save {
+    height: 48px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: $instock-blue;
+    color: $alabaster;
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+    @include tablet {
+      width: 150px;
+    }
+  }
+
+  &__cancel {
+    height: 48px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: $white;
+    color: $instock-blue;
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+    @include tablet {
+      width: 150px;
+    }
+  }
+
+}
+
+.one {
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+  }
+
+}
+
+.two{
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+  }
+}
+  
+.three{
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+  }
+}

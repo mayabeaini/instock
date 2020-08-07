@@ -1,0 +1,154 @@
+@import '../../styles/partials/allUtils';
+
+.ReactModal__Html--open,
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem;
+    margin: auto;
+    overflow-y: auto;
+
+    @include tablet {
+        padding: 2.5rem;
+        border-radius: 0.25rem;
+        height: 36rem;
+        width: 36rem;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+
+        @include tablet {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.add-new-inventory {
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: $black;
+        letter-spacing: 0.04rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    &__warning {
+        color: red;
+
+        &--hidden {
+            visibility: hidden;
+        }
+
+        &--visible {
+            visibility: visible;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    &__input-container {
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include tablet {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__column {
+        @include tablet {
+            width: 46%;
+        }
+    }
+
+    &__input-group {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1.5rem 0;
+    }
+
+    &__label {
+        font-size: 0.75rem;
+        margin: 0 0 0.15rem 0;
+        color: $silver;
+        font-weight: 700;
+    }
+
+    &__input {
+        padding: 1rem;
+        border: 2px solid $mercury;
+        border-radius: 0.25rem;
+        background-color: $alabaster;
+    }
+
+    &__instock-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem 1rem 0;
+    }
+
+    &__instock-label {
+        font-size: 0.9rem;
+    }
+
+    &__description-group {
+        @extend .add-new-inventory__input-group;
+        margin: 0;
+    }
+
+    &__description {
+        @extend .add-new-inventory__input;
+    }
+
+    &__button-group {
+        display: flex;
+        flex-flow: column;
+        margin: 2rem 0 2rem 0;
+
+        @include tablet {
+            justify-content: flex-start;
+            flex-flow: row-reverse;
+        }
+    }
+
+    &__save {
+        padding: 1rem 4rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 0.25rem;
+        letter-spacing: 0.04rem;
+        color: $alabaster;
+        background-color: $instock-blue;
+    }
+
+    &__cancel {
+        @extend .add-new-inventory__save;
+        color: $instock-blue;
+        background-color: $white;
+    }
+
+}
+
+svg:last-of-type {
+    visibility: hidden;
+}

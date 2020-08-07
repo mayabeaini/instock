@@ -1,0 +1,90 @@
+@import '../../styles/partials/allUtils';
+
+.inventory-details{
+    margin: 5vw;
+    @include tablet{
+        margin: 4.166vw 3.125vw;
+        display: flex;
+        flex-direction: column;
+    }
+    @include desktop{
+        margin: 2.7777vw 12.5vw;
+    }
+    &__top{
+        @include tablet{
+            display: flex;
+        }
+    }
+    &__title{
+        display: flex;
+        margin-bottom: 2vw;
+        @include tablet{
+            margin-bottom: 3vw;
+        }
+        @include desktop{
+            margin-bottom: 1vw;
+        }
+    }
+    &__back{
+        margin-right: 6vw;
+        @include tablet{
+            margin-right: 2.0833vw;
+        }
+        @include desktop{
+            margin-right: 1.6666vw;
+        }
+    }
+    &__product{
+        font-weight: 800;
+        color: $black;
+        font-size: 26px;
+        @include tablet{
+            font-size: 35px;
+        }
+    }
+    &__in-stock{
+        background-color: #7eab25;
+        border-radius: 4px;
+        height: 25px;
+        width: 90px;
+        border: none;
+        color: $white;
+        font-weight: 600;  
+        font-size: 13px;  
+        margin-bottom: 7vw;
+        @include tablet{
+            margin: 4.5vw 3.125vw;
+            height: 23px;
+        }
+        @include desktop{
+            height: 1.666vw;
+            width: 6.111vw;
+            font-size: 10px;
+            margin: 3.2vw 1.666vw;
+        }
+    }
+    &__out-stock{
+        background-color: $mercury;
+        border-radius: 4px;
+        height: 25px;
+        width: 90px;
+        border: none;
+        color: $black;
+        font-weight: bold;
+        font-size: 13px;  
+        margin-bottom: 7vw;
+        @include tablet{
+            margin: 4.5vw 3.125vw;
+            height: 23px;
+        }
+        @include desktop{
+            height: 1.666vw;
+            width: 6.111vw;
+            font-size: 10px;
+            margin: 3.2vw 1.666vw;
+        }
+    }
+    &--hidden{
+        display: none;
+    }
+}

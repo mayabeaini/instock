@@ -1,0 +1,353 @@
+@import '../../styles/partials/_allUtils.scss';
+
+.inventory-container {
+    margin-left: 1rem;
+    
+    &__title-searchbar {
+
+        input {
+            background-image: url(../../assets/Icons/SVG/Icon-search.svg);
+            background-repeat: no-repeat;
+            background-position: 0.8rem;
+            padding: 1rem 6rem 1rem 2rem;
+            background-color: $alabaster;
+            border-radius: 4%;
+            border: 0.1rem solid $mercury;
+        }
+    }
+
+    &__tablet {
+        display: none;
+    }
+
+    &__list {
+        margin-right: 3.125rem;
+
+        // KEBAB BUTTON
+        &-kebab {
+            position: absolute;
+            margin-left: 15.625rem;
+        }
+
+        &-button {
+            position: absolute;
+            margin: 3rem 0rem 0rem 8.5rem;
+            padding: 0.6rem 5.0rem 0.6rem 0.5rem;
+            background-color: $alabaster;
+            border: 0.0625rem solid $silver;
+            border-radius: 0.25rem;          
+        }
+
+        &-invisible {
+            display: none;
+        }
+
+        &-item,
+        &-lastordered,
+        &-location,
+        &-quantity,
+        &-status {
+
+            margin-bottom: -0.4rem;
+            
+            h5 {
+                margin-top: 2.3rem;
+                color: $silver;
+            }
+            
+            span {
+                margin-top: -0.5rem;
+                font-size: small;
+            } 
+        }
+
+        &-title {
+            font-size: 0.8rem;
+        }
+
+        &-name {
+            display: flex;
+            font-weight: bold;
+            color: $black;
+        }
+
+        &-date,
+        &-city,
+        &-count,
+        &-stock {
+            display: flex;
+        }
+
+        hr {
+            width: 105%;
+            margin: 0.625rem 2.5rem 0.5rem 0rem;
+        }
+    }
+    
+    &__add {
+
+        &-image {
+            background-color: $instock-blue-dark;
+            background-image: url('../../assets/Icons/SVG/Icon-add.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            position: sticky;
+            bottom: 2rem;
+            padding: 1.25rem;
+            border-radius: 50%;
+            margin: 0rem 2rem 2rem auto;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    @include tablet {
+        margin-left: 1.5rem;
+
+        &__title-searchbar {
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                height: 4vh;
+                margin: 0.5rem 1.5rem 0rem 0rem;
+            }
+        }
+
+        // ADD BUTTON FOR TABLET AND DESKTOP
+        &__addtabletdesktop {
+            position: absolute;
+            background-image: url(../../assets/Icons/SVG/Icon-add.svg);
+            background-color: $instock-blue-dark;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 10vh;
+            height: 10vh;
+            margin: -13.75rem 0rem 0rem 37.5rem;
+            padding: 0.625rem;
+            border-radius: 2.1875rem;
+        }
+
+        &__list {
+            display: flex;
+            border-bottom: 0.1rem solid $silver;
+            width: 98%;
+            padding-top: 0.9375rem;
+
+            &-kebab {
+                position: absolute;
+                margin: 1rem 0rem 0rem 44.375rem;
+            }
+
+            &-button {
+                position: absolute;
+                margin: 3rem 0rem 0rem 35.5rem;
+                padding: 0.6rem 6.0rem 0.6rem 0.5rem;
+                background-color: $alabaster;
+                border: 0.0625rem solid $silver;
+                border-radius: 0.25rem;          
+            }
+
+            &-invisible {
+                display: none;
+            }
+
+            &-title {
+                display: none;
+            }
+
+            &-item {
+                margin: -1rem 0rem 1.25rem 0rem;
+
+                span {
+                    display: flex;
+                    width: 40%;
+                    font-size: small;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            &-lastordered {
+                position: absolute;
+                margin-left: 18.5rem;
+
+                h5 {
+                    font-size: small;
+                }
+
+                span {
+                    margin-top: 1rem;
+                    display: flex;
+                    width: 70%;
+                    font-size: small;
+                }
+            }
+
+            &-location {
+                position: absolute;
+                margin-left: 25.7rem;
+                                
+                h5 {
+                    font-size: small;
+                }
+
+                span {
+                    margin-top: 1rem;
+                    font-size: small;
+                }
+            }
+
+            &-quantity {
+                position: absolute;
+                margin-left: 31.8rem;
+
+                h5 {
+                    font-size: small;
+                }
+
+                span {
+                    margin-top: 1rem;
+                    font-size: small;
+                }
+            }
+
+            &-status {
+                position: absolute;
+                margin-left: 38.75rem;
+
+                h5 {
+                    font-size: small;
+                }
+
+                span {
+                    margin-top: 1rem;
+                    font-size: small;
+                }
+            }
+
+            hr {
+                display: none;
+            }
+        }
+
+        &__add {
+            position: sticky;
+            top: 1rem;
+            margin: 0.1rem 0rem 0rem 26rem;
+        }
+
+        // TABLET ONLY
+        &__tablet {
+            display: flex;
+            color: $silver;
+            font-size: 0.9rem;
+
+            &-titleitem {
+                font-weight: bold;
+                margin-right: 16.5625rem;
+            }
+            
+            &-titlelastordered {
+            font-weight: bold;
+               margin-right: 1rem;
+
+            }
+
+            &-titlelocation {
+               font-weight: bold;
+               margin-left: 0.6rem; 
+            }
+
+            &-titlequanity {
+                font-weight: bold;
+                margin-left: 2.3rem;
+            }
+
+            &-titlestatus {
+                font-weight: bold;
+                margin-left: 3.1rem;
+            }
+        }        
+    }
+
+    @include desktop {
+        margin: 1.25rem 0rem 0rem 6.25rem;
+
+        &__title-searchbar {
+            margin-right: 6.25rem;
+        }
+
+        &__tablet {
+
+            &-titleitem {
+                margin-left: 5rem;
+            }
+            
+            &-titlelastordered {
+                margin-right: 2rem;
+             }
+ 
+             &-titlelocation {
+                margin-right: 1rem; 
+             }
+ 
+             &-titlequanity {
+                 margin-right: 1rem;
+             }            
+
+        }
+
+        
+        &__list {
+            width: 77%;
+            margin-left: 5rem;
+            margin-bottom: 0.625rem;
+            border-bottom: 0.1rem solid $silver;
+
+
+            &-kebab {
+                margin-left: 51rem;
+            }
+
+            &-button {
+                position: absolute;
+                margin-left: 42rem;
+                padding-right: 6.5rem;
+                background-color: $alabaster;
+                border: 0.0625rem solid $silver;
+                border-radius: 0.25rem;     
+            }
+
+            &-invisible {
+                display: none;
+            }
+
+            &-item {
+
+                span {
+                    width: 40%;
+                }    
+            }
+
+            &-lastordered {
+                margin-left: 18.3rem;
+            }
+
+            &-location {
+                margin-left: 26.55rem;
+            }
+
+            &-quantity {
+                margin-left: 33.75rem;
+            }
+
+            &-status {
+                margin-left: 41.5rem;
+            }
+        }
+
+        &__add {
+            margin-left: 36rem;
+        }
+    }
+}

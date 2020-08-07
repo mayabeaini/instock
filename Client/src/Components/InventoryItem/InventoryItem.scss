@@ -1,0 +1,102 @@
+@import '../../styles/partials/allUtils';
+
+.inventory-details{
+    &__main{
+        @include tablet{
+            border-bottom: 1px solid $mercury;
+            border-top: 1px solid $mercury;
+            margin-bottom: 5vw;
+            padding-top: 3.5vw;
+            display: flex;
+            flex-direction: column;
+        }
+        @include desktop{
+            flex-direction: row;
+            padding-top: 2vw;
+            margin-bottom: 2.777vw;
+        }
+    }
+    &--size{
+        @include desktop{
+            width: 50%;
+        }
+    }
+    &--placement{
+        @include tablet{
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        @include desktop{
+            width: 37.5vw;
+            justify-content: space-between;
+        }
+    }
+    &--width{
+        @include tablet{
+            width: 50%;
+            margin: 0;
+        }
+    }
+    &--decoration{
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $silver;
+        font-size: 12.5px;
+        margin-bottom: 0;
+        @include tablet{
+            margin-bottom: 1.5vw;
+            font-size: 12px;
+        }
+        @include desktop{
+            margin-bottom: 0.7vw;
+        }
+    }
+    &__paragraph{
+        font-size: 13px;
+        margin-top: 3vw;
+        margin-bottom: 6.5vw;
+        font-weight: 500;
+        @include tablet{
+            margin-bottom: 4vw;
+            margin-top: 0;
+            font-size: 13px;
+        }
+        @include desktop{
+            margin-bottom: 3vw;
+            font-size: 13.5px;
+            padding-right: 3vw;
+        }
+    }
+    &__button{
+        margin-top: 11vw;
+        @include tablet{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0;
+        }
+    }
+    &__edit{
+        background-color: $instock-blue;
+        border: none;
+        color: $white;
+        text-transform: uppercase;
+        height: 12.5vw;
+        width: 100%;
+        border-radius: 4px;
+        font-weight: 500;
+        &:hover , &:active{
+            background-color: $instock-blue-dark;
+        }
+        @include tablet{
+            height: 6vw;
+            width: 150px;
+            align-self: flex-end;
+            font-size: 14px;
+        }
+        @include desktop{
+            height: 3.333vw;
+            width: 11.111vw;
+        }
+    }
+}

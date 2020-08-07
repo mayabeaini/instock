@@ -1,0 +1,88 @@
+@import '../../styles/partials/allUtils';
+
+.warehouse-details {
+    padding: 0 1rem;
+
+    @include tablet {
+        padding: 0 2rem 1rem 2rem;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
+    @include desktop {
+        max-width: unset;
+        margin: 0 auto;
+        margin: 0 180px 0 180px;
+    }
+
+    &__title-group {
+        display: flex;
+        align-items: center;
+        margin: 1.5rem 0 1rem 0;
+
+        @include tablet {
+            border-bottom: 1px solid $mercury;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__title {
+        margin: 0 0 0 1rem;
+        padding: 0.25rem 0 0 0;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $black;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+    }
+
+    &__address-contact-group {
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include tablet {
+            flex-flow: row nowrap;
+            padding-left: 0.5rem;
+        }
+    }
+
+    &__sub-group {
+        width: 50%;
+    }
+
+    &__label {
+        color: $silver;
+        font-weight: 600;
+        margin: 0.5rem 0 0 0;
+        font-size: 0.9rem;
+
+        @include tablet {
+            margin-top: 1rem;
+            font-size: 0.75rem;
+        }
+    }
+
+    &__item {
+        display: block;
+        color: $black;
+        font-size: 0.9rem;
+
+        @include tablet {
+            &--display-italic {
+                font-style: italic;
+            }
+        }
+    }
+
+    &__item-group {
+        padding: 0.75rem 0;
+    }
+
+    &__inventory-list {
+        background-color: $alabaster;
+    }
+
+}
